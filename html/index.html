@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block styles %}
+    {{ block.super }}
+    
+    {% if DEBUG %}
+        <link rel="stylesheet" href="/assets/css/index.css">
+    {% else %}
+        <link rel="stylesheet" href="/assets/css/index.css">
+    {% endif %}
+{% endblock styles %}
+
+{% block body %}
+    <p>Hello!</p>
+{% endblock body %}
+
+{% block scripts %}
+    {{ block.super }}
+    
+    {% if DEBUG %}
+        <script src="/assets/js/libs/sha512.js"></script>
+        <script src="/assets/js/utils.js"></script>
+        <script src="/assets/js/api.js"></script>
+        <script src="/assets/js/temp.js"></script>
+        <script src="/assets/js/index.js"></script>
+    {% else %}
+        <script src="/assets/js/index.js"></script>
+    {% endif %}
+{% endblock scripts %}
+

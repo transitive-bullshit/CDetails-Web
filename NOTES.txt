@@ -1,0 +1,8 @@
+jQuery plugins:
+    * sortable tables:
+        * http://tablesorter.com/docs/
+        * http://www.datatables.net/
+        * http://flexigrid.info/
+    * calendars:
+        *  http://arshaw.com/fullcalendar/
+

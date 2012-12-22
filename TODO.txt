@@ -1,0 +1,6 @@
+
+* polish:
+    * shortcut icons (also apple-touch-icon, og:image)
+    * clean approach to deploying assets
+    * setup google analytics
+

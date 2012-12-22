@@ -1,0 +1,64 @@
+<!doctype html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=8" />
+        
+        <title>
+            {% if title %}
+                {{title}}
+            {% else %}
+                CDetails
+            {% endif %}
+        </title>
+        
+        <meta name="author"             content="CDetails">
+        <meta name="copyright"          content="CDetails">
+        <meta name="robots"             content="index,follow">
+        
+        <meta name="viewport"           content="width=device-width, initial-scale=0.36">
+        <meta name="application-name"   content="CDetails">
+        
+        <link rel="shortcut icon"       href="TODO">
+        <link rel="apple-touch-icon"    href="TODO">
+        
+        <meta property="og:image"       content="TODO">
+        <meta property="og:title"       content="CDetails">
+        <meta property="og:site_name"   content="CDetails">
+        <meta property="og:type"        content="website">
+        
+        {% block styles %}
+        
+        <!-- external stylesheets here -->
+        {% if DEBUG %}
+            <link rel="stylesheet"          href="/assets/css/libs/h5bp.css">
+            <link rel="stylesheet"          href="/assets/css/base.css">
+        {% else %}
+            <link rel="stylesheet"          href="/assets/css/base.css">
+        {% endif %}
+        
+        {% endblock styles %}
+    </head>
+    
+    <body>
+        {% block body %}
+        {% endblock body %}
+        
+        <div id="scripts">
+            {% block scripts %}
+            <!-- attempt to load jQuery from google's ajax CDN, falling back to our own local version -->
+            <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+            <script>window.jQuery || document.write('<script src="/assets/js/libs/jquery/jquery-1.7.2.min.js"><\/script>')</script>
+            
+            <script>
+                var _gaq=[['_setAccount','TODO'],['_trackPageview']];
+                    (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+                    g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+                    s.parentNode.insertBefore(g,s)}(document,'script'));
+            </script>
+            {% endblock scripts %}
+        </div>
+    </body>
+</html>
+
